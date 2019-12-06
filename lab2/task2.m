@@ -22,9 +22,6 @@ subplot(4,1,4);
 stem(y4); 
 
 
-
-
-
 function y = delta_func(x)
     if(x ==  14)
         y = 1;
