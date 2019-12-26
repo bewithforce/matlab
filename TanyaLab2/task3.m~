@@ -3,6 +3,7 @@ y = zeros(length(x));
 
 for i=1:length(x)
     x(i) = delta_func(x(i));
+    
     if(i > 1)
         y(i) = x(i) + 2*x(i-1) + y(i-1);
     else

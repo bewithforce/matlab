@@ -1,24 +1,24 @@
-x = -30:30;
+x = 0:40;
 y = zeros(length(x), 1);
 
-b = [1 2];
-a = [1 -1];
+b = [0 0 0.4];
+a = [1 -0.5 0.2];
 
 for i=1:length(x)
     x(i) = delta_func(x(i));
-    if(i > 1)
-        y(i) = x(i) + 2*x(i-1) + y(i-1);
-    else
-        y(i) = x(i);
+    if(i > 2)
+        y(i) = 0.4*x(i-2) + 0.2*y(i-2) - 0.5 * y(i-1);
+    elseif (i > 1)
+        y(i) = -0.5 * y(i-1);
     end
 end
 
 y1 = y;
 for i=1:length(x)
-    if(i > 1)
-        y1(i) = 2*y(i) + y(i-1) + y1(i-1);
-    else
-        y1(i) = y(i);
+    if(i > 2)
+        y1(i) = 0.4*y(i - 2) + 0.5 * y1(i-1) - 0.2 * y1(i-2);
+    elseif (i > 1)
+        y1(i) =  0.5 * y1(i-1);
     end
 end
 
@@ -36,7 +36,7 @@ stem(y2);
 
 
 function y = delta_func(x)
-    if(x ==  14)
+    if(x ==  7)
         y = 1;
     else
         y = 0;

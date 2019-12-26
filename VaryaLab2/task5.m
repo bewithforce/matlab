@@ -1,6 +1,6 @@
 omega = 0 : 0.01 : pi; 
-b = [2 1];
-a = [-1 1];
+b = [1 1 1];
+a = [1 0 0];
 
 y = zeros(length(omega), 1);
 for i = 1:length(omega)
@@ -11,11 +11,15 @@ end
 figure;
 subplot(131);
 plot(y);
+title('Комплексно-частотная'); 
+
 subplot(132);
 plot(abs(y));
+title('Амплитудно-частотная');
+
 subplot(133);
 plot(angle(y));
-
+title('Фазо-частотная'); 
 
 
 function y = H_func(ejw, a, b)

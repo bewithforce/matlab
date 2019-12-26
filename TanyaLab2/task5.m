@@ -1,6 +1,6 @@
 omega = 0 : 0.01 : pi; 
-b = [2 1];
-a = [-1 1];
+b = [0 0 0.4];
+a = [1 -0.5 0.2];
 
 y = zeros(length(omega), 1);
 for i = 1:length(omega)
