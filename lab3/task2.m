@@ -1,4 +1,12 @@
 x = [1 0 0 0 0 1 1 0 0 0 0 1 1 1 0 0 0 0 1 1 1 1];
+y = fft(x);
+
+y1 = SinCosAmps(y);
+
+stem(y1(:, 1), 'red');
+hold on;
+stem(y1(:, 2), 'green');
+clear y;
 
 
 

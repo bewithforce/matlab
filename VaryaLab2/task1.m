@@ -18,10 +18,10 @@ b = 7;
 y1 = a*DS_01(x1) + b*DS_01(x2);
 y2 = DS_01(a*x1 + b*x2);
 figure('Name', 'Task1 - Liniar');
-subplot(2,2,1);
+subplot(1,2,1);
 stem(y1);
 title('a*f(x) + b*f(y)');
-subplot(2,2,2);
+subplot(1,2,2);
 stem(y2); 
 title('f(a*x + b*y)');
 
