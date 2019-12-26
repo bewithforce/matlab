@@ -1,4 +1,4 @@
-x = -20:20;
+x = 0:20;
 y = zeros(length(x));
 
 for i=1:length(x)

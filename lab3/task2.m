@@ -1,10 +1,5 @@
 x = [1 0 0 0 0 1 1 0 0 0 0 1 1 1 0 0 0 0 1 1 1 1];
-y = fft(x);
 
-plot(real(y), 'red');
-hold on;
-plot(imag(y), 'green');
-clear y;
 
 
 function [y] = SinCosAmps(x)

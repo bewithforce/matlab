@@ -1,11 +1,4 @@
 disp("Additive: ");
-x = -20:20;
-y1 = zeros(length(x));
-y2 = zeros(length(x));
-y3 = zeros(length(x));
-y4 = zeros(length(x));
-y5 = zeros(length(x));
-disp(DS_04(2));
 disp(DS_04(1) + DS_04(1));
 x = [0 0 1 0 0 0 0 0 1 1 0 0 0 0 0 1 1 1 0 0 0 0 0];
 y = DS_04(x);
@@ -19,25 +12,17 @@ title('y(n)');
 
 x1 = [0 0 1 0 0 0 0 0 1 1 0 0 0 0 0 1 1 1 0 0 0 0 0];
 x2 = [1 0 0 0 0 0 1 1 0 0 0 0 0 1 1 1 0 0 0 0 0 0 1];
-y1 = DS_04(x1) + DS_04(x2);
-y2 = DS_04(x1 + x2);
+a = 5;
+b = 7;
+y1 = a*DS_04(x1) + b*DS_04(x2);
+y2 = DS_04(a*x1 + b*x2);
 figure('Name', 'Task1 - Liniar');
 subplot(2,2,1);
 stem(y1);
-title('f(x1) + f(x2)');
+title('a*f(x) + b*f(y)');
 subplot(2,2,2);
 stem(y2); 
-title('f(x1 + x2)');
-
-x = [1 0 0 0 0 0 1 1 0 0 0 0 0 1 1 1 0 0 0 0 0 0 1];
-c = 5;
-y1 = c * DS_04(x);
-y2 = DS_04(c * x);
-subplot(2,2,3);
-stem(y1);
-title('c * f(x)');
-subplot(2,2,4);
-stem(y2); 
+title('f(a*x + b*y)');
 title('f(c * x)');
 
 x1 = [0 0 1 0 0 0 0 0 1 1 0 0 0 0 0 1 1 1 0 0 0 0 0];
